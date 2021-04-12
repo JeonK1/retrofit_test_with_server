@@ -1,4 +1,4 @@
-"""restful_api URL Configuration
+"""myproject URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from rest_framework.urlpatterns import format_suffix_patterns
+from webapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+	path('employees/', views.employeeList.as_view()),
 ]
